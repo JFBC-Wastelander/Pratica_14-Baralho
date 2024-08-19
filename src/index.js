@@ -2,6 +2,7 @@ const express = require("express")
 const naipe_controller = require("./controllers/naipe.js")
 const app = express()
 const port = 3000
+app.use(express.json())
 
 app.post("/naipe", (req, res) => {
     const naipe = req.body
