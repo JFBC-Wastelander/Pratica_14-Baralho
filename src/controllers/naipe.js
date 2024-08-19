@@ -34,14 +34,12 @@ const update = (id, body) => {
     return 400
 }
 
-const destroy = index => {
-    const index = db.findIndex(el => el.id == id)
+const destroy = id => {
+    const indexx = db.findIndex(el => el.id == id)
 
-    if (index != -1) {
-        db.splice(index, 1)
-        return 200
+    if (indexx != -1) {
+        db.splice(indexx, 1)
     }
-    return 400
 }
 
 module.exports = {
